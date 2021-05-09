@@ -1,0 +1,1 @@
+<img src="file://<% tp.system.clipboard() %>" alt="" style="width:auto">
