@@ -7,4 +7,4 @@ This small [Templater](https://github.com/SilentVoid13/Templater) script works s
 
 ## Showcase
 
-![](https://github.com/chetachiezikeuzor/Obsidian-Templates/blob/main/assets/highlightr.mov)
+![](https://github.com/chetachiezikeuzor/Obsidian-Templates/blob/main/assets/highlightr.mov/)
