@@ -1,105 +1,16 @@
-```ad-faq
-collapse: true
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
-```
-
-```ad-cite
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
-```
-
-```ad-check
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
-```
-
-```ad-todo
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
-```
-
-```ad-note
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
-```
-
-```ad-abstract
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
-```
-
-```ad-info
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
-```
-
-```ad-tip
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
-```
-
-```ad-done
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
-```
-
-```ad-success
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
-```
-
-```ad-question
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
-```
-
-```ad-attention
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
-```
-
-```ad-hint
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
-```
-
-```ad-important
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
-```
-
-```ad-caution
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
-```
-
-```ad-warning
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
-```
-
-```ad-failure
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
-```
-
-```ad-danger
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
-```
-
-```ad-bug
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
-```
-
-```ad-seealso
-title: Clipped
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
-```
-
-```ad-summary
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
-```
-
-```ad-quote
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
-```
-
-```ad-example
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
-```
-
-```ad-missing
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
-```
-
-```ad-error
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
-```
-
-```ad-help
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
+```<%* 
+newLine = "\n";
+const admonitionType = await tp.system.suggester(["📰 Abstract","❗️ Attention","🪲 Bug","🚧 Caution","✅ Check","✏️ Cite","📌 Clipped","🌋 Danger","👍🏽 Done","🙅🏽‍♀️ Error","📄 Example", "❌ Failure", "📃 FAQ", "📍 Help","💡 Hint","🕒 Important","ℹ️ Info","🔍 Missing","📝 Note","❓Question","💬 Quote","🏁 Success","📖 Summary","⚡️ Tip","⏹ Todo","☠️ Warning"],  ["abstract","attention","bug","caution","check","cite","clipped","danger","done", "error", "example", "failure","faq","help","hint","inportant","info","missing","note","question","quote", "success", "summary", "tip", "todo", "warning"]) %>ad-<%* tR += admonitionType %>
+<%*
+    const title = await tp.system.prompt("Enter Title (Optional)");
+	const collapse = await tp.system.suggester(["Collapse", "No Collapse"], ["collapse: true", " "]);
+    if(title){
+-%>
+title:<%* tR += title + newLine + collapse%>
+<%*
+    }else{
+	return;
+	}
+%>
+<% tp.file.selection() %>
 ```
